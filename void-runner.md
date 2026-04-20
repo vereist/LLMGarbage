@@ -60,3 +60,75 @@ The game is designed for a combination of a standard Atari Joystick and the Keyb
     * **Storage (Floppy):** Level chunks and the permanent "Core Credit" save file are stored on the disk.
 * **CPU Optimization:** By using PMG for all moving entities, the game avoids the heavy processing cost of full-screen bitmap manipulation, allowing for a high frame rate even when many projectiles are on screen.
 * **Randomization:** A pseudo-random number generator (PRNG) seeded by the system clock will drive the procedural layout and loot drops.
+
+
+# Expanded
+
+# VOID-RUNNER: Expanded Design Document
+
+## 1. Narrative: The Ghost in the Machine
+
+**The Setting:** The "Aethelgard Mainframe," a god-like supercomputer that once managed an entire civilization's digital consciousness, has begun to undergo "The Great Defragmentation"—a catastrophic system collapse. As the system deletes itself to preserve core functions, a chaotic void of corrupted data is consuming everything.
+
+**The Protagonist:** You are an **Echo**, a fragmented remnant of a high-level administrator's consciousness. You have no physical form, only a digital avatar composed of pure light and logic.
+
+**The Objective:** You must descend through the collapsing layers of the mainframe, from the polished upper-tier directories to the raw, unstable Kernel at the center. Your goal is to reach the "Source Core" to initiate a hard reboot of the system, potentially saving the remaining digital souls or erasing the corruption forever.
+
+---
+
+## 2. Bestiary (Enemies)
+
+Enemies are categorized by their visual "Glitch" intensity. High-intensity enemies flicker more violently on the screen.
+
+### 2.1 Fodder (Low Threat)
+* **Bit-Flies:** Small, fast-moving clusters of pixels. They don't deal much damage but attempt to swarm the player, making movement difficult.
+* **Null-Walkers:** Slow, shambling humanoid silhouettes. They move toward the player and deal moderate contact damage.
+
+### 2.2 Combatants (Medium Threat)
+* **Buffer-Snipers:** Stationary or slow-moving units that fire slow-moving, high-damage "Data Packets" (large glowing projectiles). They require the player to use the Dash mechanic to dodge.
+* **Glitch-Shades:** Erratic enemies that "stutter" across the screen. They utilize short-range teleportation (flickering out of existence and reappearing) to close the gap.
+
+### 2.3 Elites & Bosses (High Threat)
+* **Logic-Crushers:** Massive, heavy-duty geometric shapes (cubes/pyramids). They act as tanks, absorbing significant damage and performing wide-area "Shockwave" attacks.
+* **The Firewall Sentinel (Sector Boss):** A massive, multi-segmented entity that guards the transition between sectors. It fires patterned laser grids that the player must navigate through using precise movement.
+
+---
+
+## 3. Arsenal & Abilities
+
+### 3.1 Base Weapons (Found via Data Terminals)
+* **Pulse Carbine:** The standard-issue weapon. Rapid-fire, low recoil, medium damage.
+* **Ion Repeater:** Fires heavy, slow-moving bolts that pierce through multiple enemies.
+* **Plasma Scatter:** A short-range "shotgun" style weapon that fires a cone of high-intensity particles, excellent for clearing Bit-Flies.
+
+### 3.2 Neural Augments (Abilities)
+* **Phase Dash:** Upgrades the standard dash. At higher levels, the dash leaves a trail of "Static Damage" that hurts enemies.
+* **Overclock:** A temporary burst mode. For 5 seconds, the player's movement speed and fire rate are doubled, but they take 25% more damage afterward due to "System Heat."
+* **Kinetic Shield:** Generates a circular barrier around the player that absorbs a set amount of damage before shattering.
+
+---
+
+## 4. Environments & Themes
+
+To optimize the Atari 800's hardware, environments are defined by distinct color palettes and tile-set behaviors.
+
+### 4.1 Sector 1: The Neon Core (The Upper Tiers)
+* **Visuals:** High-contrast Cyan and Magenta. Clean, geometric architecture. Smooth, scrolling backgrounds.
+* **Atmosphere:** Organized but frantic. The feeling of a high-speed data highway.
+
+### 4.2 Sector 2: The Data Graveyard (The Sub-Directories)
+* **Visuals:** Darker tones. Deep Purples and Lime Greens. The background features "debris"—flickering, broken tiles and floating, non-interactive sprites to simulate a junkyard.
+* **Atmosphere:** Claustrophobic and decaying.
+
+### 4.3 Sector 3: The Kernel Abyss (The Core)
+* **Visuals:** Monochromatic/High-Intensity. Harsh Whites and Reds on Pitch Black. The environment itself feels unstable, with tiles occasionally shifting or "glitching" out of place.
+* **Atmosphere:** Pure digital chaos. High difficulty, high reward.
+
+---
+
+## 5. Interactable Objects
+
+* **Data Terminals:** The primary source of upgrades. Interacting with one pauses the combat loop and presents the player with three randomized Augment choices.
+* **Fragment Nodes:** Glowing orbs of light. Collecting these grants "Data Fragments" (XP) used for both mid-run upgrades and meta-progression.
+* **Firewall Gates:** Large, indestructible barriers that block progress. These must be destroyed by defeating a specific number of enemies or by finding a "Decryption Key" drop.
+* **System Stabilizers:** Rare, interactable objects that, when activated, temporarily clear all "Bit-Flies" from the screen and restore a small amount of player health.
